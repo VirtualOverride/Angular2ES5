@@ -1,0 +1,17 @@
+{
+  "name": "ng2es5",
+  "version": "0.0.0",
+  "homepage": "https://github.com/VirtualOverride/Angular2ES5",
+  "description": "AngularJS 2.0 with ES5",
+  "authors": [
+    "Arjay Elbore"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
