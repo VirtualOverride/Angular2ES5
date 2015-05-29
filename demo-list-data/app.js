@@ -2,7 +2,7 @@
 	'use strict';
 
 	document.addEventListener('DOMContentLoaded', function() {
-	  angular.bootstrap(App.HelloWorld);
+	  angular.bootstrap(App.Place);
 	});
 	
 })();
