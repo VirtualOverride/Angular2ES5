@@ -6,14 +6,12 @@ var App;
 		this.places = Places.get().data;
 	}
 
-    place.annotations = [
-		new angular.ComponentAnnotation({
+   	var Place = Utils.at({
+		Component: {
 			selector: 'ph-place',
-			appInjector: [
-			  Service.Places
-			]
-		}),
-		new angular.ViewAnnotation({
+			appInjector: [Service.Places]
+		},
+		View: {
 			template: ['',
 			'<ul>',
 			  '<li *ng-for="#place of places">',
@@ -22,11 +20,11 @@ var App;
 			'</ul>',
 			''].join(''),
 			directives: [angular.NgFor]
-		})
-	];
+		},
+		parameters: [Service.Places],
+		forClass: place 
+	});
 
-	place.parameters = [Service.Places];
-
-	App.Place = place;
+	App.Place = Place;
 
 })(App || (App = {}));
