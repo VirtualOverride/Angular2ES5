@@ -1,24 +1,23 @@
-/// <reference path="../typings/angularjs/angular.d.ts"/>
 var App;
 (function(App){
 	'use strict';
 
-	var HelloWorld = function(helloWorldService){
+	function helloWorld(helloWorldService){
 		this.hello = helloWorldService.hello();
-	};
-
-	HelloWorld.annotations = [
-		new angular.ComponentAnnotation({
+	}
+	
+	var HelloWorld = angular.
+		Component({
 			selector: 'hello',
 			appInjector: [Service.HelloWorld]
-		}),
-		new angular.ViewAnnotation({
+		}).
+		View({
 			template: '{{ hello }}'
-		})
-	];
-
-	HelloWorld.parameters = [[Service.HelloWorld]];
-
+		}).
+		Class({
+			constructor: [Service.HelloWorld, helloWorld]
+		});
+		
 	App.HelloWorld = HelloWorld;
 
 })(App || (App = {}));
