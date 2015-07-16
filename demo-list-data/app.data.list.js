@@ -19,6 +19,6 @@ var App;
 			constructor: [Service.Places, place]
 		});
 
-		App.Place = Place;
+	App.Place = Place;
 
 })(App || (App = {}));

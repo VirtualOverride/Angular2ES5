@@ -2,8 +2,7 @@ var App;
 (function(App){
 	'use strict';
 
-	document.addEventListener('DOMContentLoaded', function() {
-	  angular.bootstrap(App.Place, []);
-	}, false);
+	angular
+		.bootstrap(App.HelloWorld);
 	
 })(App || (App = {}));
