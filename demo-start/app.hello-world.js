@@ -1,3 +1,4 @@
+/// <reference path="../typings/angularjs/angular.d.ts"/>
 var App;
 (function(App){
 	'use strict';
